@@ -1,6 +1,7 @@
 require 'pry'
 require 'rest-client'
 require 'json'
+require 'color_text'
 
 
 require_relative './models/characters.rb'

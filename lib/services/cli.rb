@@ -1,17 +1,19 @@
 
 class Cli
 
-    def begin #starts our program, is called upon in run
+    def begin 
         puts ""
-        puts "Welcome to the Harry Potter Actor API! Here you can select a character and see the name of the actor who played them in the films." # greets user
-        puts "Please hold while the application loads the data..."
-        Api.get_data # loads in the data
+        puts "Welcome to the Harry Potter Actor API! Here you can select a character and see the name of the actor who played them in the films.".neon 
+        puts ""
+        puts "Please hold while the application loads the data...".neon
+        Api.get_data 
         puts ""
         choose_menu
     end
 
     def choose_menu
-        puts "Which character would you like to select?"
+        puts "Which character would you like to select?".neon
+        puts ""
         list_characters
     end
 
@@ -22,14 +24,15 @@ class Cli
         enter_choice
     end
 
-    def enter_input
-        print "Please enter the number of the character you wish to choose: "
+    def get_input
+        puts ""
+        print "Please enter the number of the character you wish to choose: ".neon
         input = gets.chomp
         input
     end
 
     def enter_choice
-        input = enter_input
+        input = get_input
 
         if input.to_i.between?(1, Characters.all.length)
             
@@ -37,7 +40,7 @@ class Cli
             character = Characters.all[index]
             results(character)
         elsif input == "exit"
-            exit
+            exit_program
         else
             error
         end
@@ -45,26 +48,31 @@ class Cli
 
 
     def results(character)
-        puts "#{character.name} is played by #{character.actor}."
-        puts "Would you like to select another character?"
+        puts "#{character.name} is played by #{character.actor}.".green 
+        puts "Would you like to select another character?".neon
         input = gets.chomp
         if input.downcase == "yes"
             choose_menu
-        elsif input.downcase == "no"
-            exit
+        elsif input.downcase == "no" || "exit"
+            exit_program
         else
             error
         end
     end
 
     def error
-        puts "Error--The value you have entered is not valid. Would you like to try again?"
+        puts "Error--The value you have entered is not valid. Would you like to try again?".red
             error_try_again = gets.chomp
             if error_try_again.downcase == "yes"
-                enter_input
+                get_input
             else 
-                exit
+                exit_program
             end
+    end
+
+    def exit_program
+        puts "Goodbye!".yellow
+        exit
     end
 
 end
