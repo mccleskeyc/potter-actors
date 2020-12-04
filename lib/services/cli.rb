@@ -53,7 +53,9 @@ class Cli
         input = gets.chomp
         if input.downcase == "yes"
             choose_menu
-        elsif input.downcase == "no" || "exit"
+        elsif input.downcase == "no"
+            exit_program
+        elsif input.downcase == "exit"
             exit_program
         else
             error
