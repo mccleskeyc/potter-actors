@@ -66,7 +66,7 @@ class Cli
         puts "Error--The value you have entered is not valid. Would you like to try again?".red
             error_try_again = gets.chomp
             if error_try_again.downcase == "yes"
-                get_input
+                choose_menu
             else 
                 exit_program
             end
