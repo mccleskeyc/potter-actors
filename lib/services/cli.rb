@@ -3,7 +3,7 @@ class Cli
 
     def begin 
         puts ""
-        puts "Welcome to the Harry Potter Actor API! Here you can select a character and see the name of the actor who played them in the films.".neon 
+        puts "Welcome to the Harry Potter Actor CLI! Here you can select a character and see the name of the actor who played them in the films.".neon 
         puts ""
         puts "Please hold while the application loads the data...".neon
         Api.get_data 
