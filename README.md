@@ -1,8 +1,8 @@
 # PotterActors
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/potter_actors`. To experiment with that code, run `bin/console` for an interactive prompt.
+## About
 
-TODO: Delete this and the text above, and describe your gem
+This gem provides a list of characters from the Harry Potter series and, upon selecting a character, will provide the user with the name of the actor who plays them in the films.
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ potter_actors
 
 ## Development
 
@@ -33,4 +33,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/potter_actors.
+
+## License
+This gem is available under the terms of the MIT License at https://opensource.org/licenses/MIT.
 
