@@ -28,7 +28,6 @@ class Cli
         puts ""
         print "Please enter the number of the character you wish to choose: ".neon
         input = gets.chomp
-        input
     end
 
     def enter_choice
