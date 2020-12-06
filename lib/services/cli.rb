@@ -38,7 +38,7 @@ class Cli
             index = input.to_i - 1
             character = Characters.all[index]
             results(character)
-        elsif input == "exit"
+        elsif input.downcase == "exit"
             exit_program
         else
             error
