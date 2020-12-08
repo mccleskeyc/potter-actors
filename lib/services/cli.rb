@@ -45,7 +45,6 @@ class Cli
         end
     end
 
-
     def results(character)
         puts "#{character.name} is played by #{character.actor}.".green 
         puts "Would you like to select another character?".neon
