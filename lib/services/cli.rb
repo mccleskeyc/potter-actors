@@ -44,7 +44,7 @@ class Cli
             error
         end
     end
-    def results(character) # passes in character from enter_choice method
+    def results(character) 
         puts "#{character.name} is played by #{character.actor}.".green # interpolates the appropriate fields from the API to display result
         puts "Would you like to select another character? Please enter 'yes', 'no', or 'exit'.".neon
         input = gets.chomp

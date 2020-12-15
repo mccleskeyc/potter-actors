@@ -1,13 +1,13 @@
 class Characters
     attr_accessor :name, :actor
 
-    @@all = [] # class variable set equal to an empty array for the name and actor data to be shoveled into
+    @@all = [] 
 
-    def initialize(data) # use an initialize method and instance variables to store the name and actor data
+    def initialize(data) # initialize method to save our character and actor names
     @name = data["name"]
     @actor = data["actor"]
 
-    @@all << self # stores the instance in the @@all class variable per above
+    @@all << self 
     end
 
     def self.all
