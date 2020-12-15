@@ -8,4 +8,3 @@ require_relative './models/potter_actors.rb'
 require_relative './services/api.rb'
 require_relative './services/cli.rb'
 
-# requires the above because they are constants we will need throughout our app

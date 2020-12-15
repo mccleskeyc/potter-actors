@@ -2,7 +2,7 @@ require_relative 'lib/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "potter_actors"
-  spec.version       = 0.2.0
+  spec.version       = PotterActors::VERSION
   spec.authors       = ["mccleskeyc"]
   spec.email         = ["mccleskeyc@gmail.com"]
 

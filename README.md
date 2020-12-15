@@ -6,23 +6,13 @@ This gem provides a list of characters from the Harry Potter series and, upon se
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'potter_actors'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install potter_actors
+1. Fork and clone this GitHub repository.
+2. Save it locally using git clone and the repository URL.
+3. Inside the cloned folder, run 'bundle install' to install dependencies. 
 
 ## Usage
 
-    $ potter_actors
+Once installed, it can be loaded by running 'ruby bin/run' in the local folder in the terminal.
 
 ## Development
 

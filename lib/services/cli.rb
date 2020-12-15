@@ -18,7 +18,7 @@ class Cli
     end
 
     def list_characters
-        Characters.all.each.with_index(1) do |character, index|
+        Characters.all.each.with_index(1) do |character, index| # iterates over each and adds one to index to get human-friendly list display
             puts "#{index}. #{character.name}"
         end
         enter_choice
@@ -33,9 +33,9 @@ class Cli
     def enter_choice
         input = get_input
 
-        if input.to_i.between?(1, Characters.all.length)
+        if input.to_i.between?(1, Characters.all.length) # takes the input and turns it into an integer, checks that it's a number valid with our list options
             
-            index = input.to_i - 1
+            index = input.to_i - 1 # takes input and turns it into an integer -1 so we get our true index to reference below
             character = Characters.all[index]
             results(character)
         elsif input.downcase == "exit"
@@ -44,9 +44,8 @@ class Cli
             error
         end
     end
-
-    def results(character)
-        puts "#{character.name} is played by #{character.actor}.".green 
+    def results(character) # passes in character from enter_choice method
+        puts "#{character.name} is played by #{character.actor}.".green # interpolates the appropriate fields from the API to display result
         puts "Would you like to select another character?".neon
         input = gets.chomp
         if input.downcase == "yes"
