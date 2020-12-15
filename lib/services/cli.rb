@@ -18,7 +18,7 @@ class Cli
     end
 
     def list_characters
-        Characters.all.each.with_index(1) do |character, index| # iterates over each and adds one to index to get human-friendly list display
+        Characters.all.each.with_index(1) do |character, index| 
             puts "#{index}. #{character.name}"
         end
         enter_choice
@@ -33,9 +33,9 @@ class Cli
     def enter_choice
         input = get_input
 
-        if input.to_i.between?(1, Characters.all.length) # takes the input and turns it into an integer, checks that it's a number valid with our list options
+        if input.to_i.between?(1, Characters.all.length)
             
-            index = input.to_i - 1 # takes input and turns it into an integer -1 so we get our true index to reference below
+            index = input.to_i - 1 
             character = Characters.all[index]
             results(character)
         elsif input.downcase == "exit"
@@ -46,7 +46,7 @@ class Cli
     end
     def results(character) # passes in character from enter_choice method
         puts "#{character.name} is played by #{character.actor}.".green # interpolates the appropriate fields from the API to display result
-        puts "Would you like to select another character?".neon
+        puts "Would you like to select another character? Please enter 'yes', 'no', or 'exit'.".neon
         input = gets.chomp
         if input.downcase == "yes"
             choose_menu
@@ -60,7 +60,7 @@ class Cli
     end
 
     def error
-        puts "Error--The value you have entered is not valid. Would you like to try again?".red
+        puts "Error--The value you have entered is not valid. Would you like to try again? Please enter 'yes', 'no', or 'exit'.".red
             error_try_again = gets.chomp
             if error_try_again.downcase == "yes"
                 choose_menu
