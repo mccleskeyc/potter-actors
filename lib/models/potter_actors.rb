@@ -3,7 +3,7 @@ class Characters
 
     @@all = [] 
 
-    def initialize(data) # initialize method to save our character and actor names
+    def initialize(data) # saves our character and actor names
     @name = data["name"]
     @actor = data["actor"]
 
