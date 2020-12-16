@@ -45,7 +45,7 @@ class Cli
         end
     end
     def results(character) 
-        puts "#{character.name}, is played by #{character.actor}.".green # reads [character] is played by [character] using the data from the api
+        puts "#{character.name} is played by #{character.actor}.".green # reads [character] is played by [character] using the data from the api
         puts "Would you like to select another character? Please enter 'yes', 'no', or 'exit'.".neon
         input = gets.chomp
         if input.downcase == "yes"
