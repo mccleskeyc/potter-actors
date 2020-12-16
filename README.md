@@ -7,11 +7,11 @@ This gem provides a list of characters from the Harry Potter series and, upon se
 ## Installation
 
 1. Fork and clone this GitHub repository.
-2. Inside the cloned folder, run bundle install to install dependencies. 
+2. Inside the cloned folder, run `bundle install` to install dependencies. 
 
 ## Usage
 
-Once installed, it can be loaded by running ruby bin/run in the local folder in the terminal.
+Once installed, it can be loaded by running `ruby bin/run` in the local folder in the terminal.
 
 ## Development
 
