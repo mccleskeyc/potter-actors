@@ -17,7 +17,7 @@ class Cli
         list_characters
     end
 
-    def list_characters
+    def list_characters # displays numbered character list
         Characters.all.each.with_index(1) do |character, index| 
             puts "#{index}. #{character.name}"
         end
